@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.card-container {
+  max-width: 440px;
+  margin: 8px auto;
+  padding: 16px;
+}
+
+.card-container .card-image {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-container .card-content-bottom {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 0 0 8px 8px;
+}
+
+.card-container .card-content-bottom h3 {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-container .card-content-bottom form {
+  width: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-container .card-content-bottom form div{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-container .card-content-bottom form div label{
+  font-size: .9em;
+  color: #888;
+}
+
+.card-container .card-content-bottom form div #score, #email{
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 8px;
+  height: 32px;
+}
+
+.card-container .card-content-bottom .card-button {
+  background-color: var(--primary-color);
+  letter-spacing: 1px;
+  align-self: center;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 32px;
+}

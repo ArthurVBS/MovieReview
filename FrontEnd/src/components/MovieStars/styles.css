@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.stars-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stars-container i {
+  color: goldenrod;
+}
