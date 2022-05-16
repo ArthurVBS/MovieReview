@@ -1,20 +1,17 @@
 import MovieStars from "../MovieStars"
 import './styles.css'
 
-const MovieScore: React.FC = () => {
-  const movie = {
-    id: 1,
-    image: 'https://www.themoviedb.org/t/p/w500_and_h282_face/lOr9NKxh4vMweufMOUDJjJhCRHW.jpg',
-    title: 'WandaVision',
-    count: 3,
-    score: 3.5
-  }
+type Props = {
+  score : number,
+  count : number
+}
 
+const MovieScore = ({score, count} : Props) => {
   return (
     <div className="score-container">
-      <span className="score-value">{movie.score > 0 ? movie.score.toFixed(1) : '-'}</span>
-      <MovieStars />
-      <span className="score-count">{movie.count} Reviews</span>
+      <span className="score-value">{score > 0 ? score.toFixed(1) : '-'}</span>
+      <MovieStars score={score} />
+      <span className="score-count">{count} Reviews</span>
     </div>
   )
 }

@@ -1,9 +1,14 @@
 @charset "UTF-8";
 
 .card-container {
-  max-width: 440px;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  max-width: 480px;
+  min-height: 100%;
   margin: 8px auto;
-  padding: 16px;
+  border-radius: 8px;
 }
 
 .card-container .card-image {
@@ -12,20 +17,21 @@
 }
 
 .card-container .card-content-bottom {
-  background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   padding: 12px;
-  border-radius: 0 0 8px 8px;
 }
 
 .card-container .card-content-bottom h3 {
   color: #000;
   text-align: center;
+  font-size: 1.2em;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 12px;
 }
 
 .card-container .card-content-bottom form {
