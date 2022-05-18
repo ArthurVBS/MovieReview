@@ -1,12 +1,15 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
-import MovieCard from "../../components/MovieCard"
-import Pagination from "../../components/Pagination"
-import { MoviePage } from "../../types/movie"
-import { BASE_URL } from "../../utils/request"
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import { MoviePage } from '../../types/movie'
+import { BASE_URL } from '../../utils/request'
+import Modal from '../../components/Modal'
+import MovieContainer from '../../components/MovieContainer'
+import Pagination from '../../components/Pagination'
 
 const Listing: React.FC = () => {
-  const [pageNumber, setPageNumber] = useState(0)
+  const [pageNumber, setPageNumber] = useState<Number>(0)
+
+  const [connected, setConnected] = useState<Boolean>(false)
 
   const [page, setPage] = useState<MoviePage>({
     content: [],
@@ -21,32 +24,42 @@ const Listing: React.FC = () => {
   })
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`)
+    axios
+      .get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`)
+
       .then(response => {
         const data = response.data as MoviePage
         setPage(data)
-      });
-  }, [pageNumber]);
+        setConnected(true)
+      })
+
+      .catch((err) => {
+        console.log(`Waiting for Backend ${err}`)
+      })
+  }, [pageNumber])
 
   const handlePageChange = (newPageNumber: number) => {
     setPageNumber(newPageNumber)
   }
 
+  const renderListing = () => {
+    return (
+      <>
+        <Pagination page={page} onChange={handlePageChange} />
+        <MovieContainer page={page} />
+      </>
+    )
+  }
+
+  const renderError = () => {
+    return (
+      <Modal title='Waiting for Backend...' message='Please, come back in a few minutes' />
+    )
+  }
+
   return (
     <>
-      <Pagination page={page} onChange={handlePageChange} />
-
-      <div className="container">
-        <div className="row">
-
-          {page.content.map(movie => (
-            <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
-              <MovieCard movie={movie} />
-            </div>
-          ))}
-
-        </div>
-      </div>
+      {connected ? renderListing() : renderError()}
     </>
   )
 }

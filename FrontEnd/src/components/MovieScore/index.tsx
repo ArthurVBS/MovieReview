@@ -1,5 +1,5 @@
-import MovieStars from "../MovieStars"
-import './styles.css'
+import MovieStars from '../MovieStars'
+import { Container, Count, Value } from './styles'
 
 type Props = {
   score : number,
@@ -8,11 +8,11 @@ type Props = {
 
 const MovieScore = ({score, count} : Props) => {
   return (
-    <div className="score-container">
-      <span className="score-value">{score > 0 ? score.toFixed(1) : '-'}</span>
+    <Container>
+      <Value>{score > 0 ? score.toFixed(1) : '-'}</Value>
       <MovieStars score={score} />
-      <span className="score-count">{count} Reviews</span>
-    </div>
+      <Count className='score-count'>{count} Reviews</Count>
+    </Container>
   )
 }
 

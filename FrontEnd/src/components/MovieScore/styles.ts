@@ -1,18 +1,18 @@
-@charset "UTF-8";
+import styled from 'styled-components'
 
-.score-container{
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
-}
+`
 
-.score-value{
+export const Value = styled.span`
   color: goldenrod;
   font-size: 1.4em;
-}
+`
 
-.score-count{
+export const Count = styled.span`
   color: #888;
-}
+`

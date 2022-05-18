@@ -1,13 +1,13 @@
-import './styles.css'
+import { Container, StyledLink, Logo, Nav } from './styles'
 
 const Navbar: React.FC = () => {
   return (
-    <header>
-      <nav className="container nav-content">
-        <h3>Movie Review</h3>
-        <a href="https://github.com/ArthurVBS"><i className="fab fa-github"></i> /ArthurVBS</a>
-      </nav>
-    </header>
+    <Container>
+      <Nav className='container'>
+        <Logo>Movie Review</Logo>
+        <StyledLink href="https://github.com/ArthurVBS" target='_blank'><i className="fab fa-github"></i> /ArthurVBS</StyledLink>
+      </Nav>
+    </Container>
   )
 }
 

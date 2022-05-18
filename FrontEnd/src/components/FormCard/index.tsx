@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Movie } from '../../types/movie'
 import { BASE_URL } from '../../utils/request'
 import validateEmail from '../../utils/validate'
-import './styles.css'
+import { Button, Container, Box, Form, Image, Input, Label, Select, Title } from './styles'
 
 type Props = {
   movieId: String
@@ -20,6 +20,9 @@ const FormCard = ({ movieId }: Props) => {
     axios.get(`${BASE_URL}/movies/${movieId}`)
       .then(response => {
         setMovie(response.data)
+      })
+      .catch((err) => {
+        console.log('Waiting for Backend' + err)
       })
   }, [movieId])
 
@@ -51,32 +54,32 @@ const FormCard = ({ movieId }: Props) => {
   }
 
   return (
-    <section className='card-container'>
-      <img className='card-image' src={movie?.image} alt={movie?.title} />
-      <div className='card-content-bottom'>
-        <h3>{movie?.title}</h3>
-        <form onSubmit={handleSubmit}>
+    <Container>
+      <Image src={movie?.image} alt={movie?.title} />
+      <Box>
+        <Title>{movie?.title}</Title>
+        <Form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email">Type your email address</label>
-            <input type="email" name="f-email" id="email" required />
+            <Label htmlFor="email">Type your email address</Label>
+            <Input type="email" name="f-email" id="email" required />
           </div>
 
           <div>
-            <label htmlFor="score">Rate the movie</label>
-            <select name="f-score" id="score" required>
+            <Label htmlFor="score">Rate the movie</Label>
+            <Select name="f-score" id="score" required>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
-            </select>
+            </Select>
           </div>
 
-          <button className='card-button' type="submit">Submit</button>
-        </form>
-        <button className='card-button'><Link to='/'>Cancel</Link></button>
-      </div>
-    </section>
+          <Button type="submit">Submit</Button>
+        </Form>
+        <Button><Link to='/'>Cancel</Link></Button>
+      </Box>
+    </Container>
   )
 }
 

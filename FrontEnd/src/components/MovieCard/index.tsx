@@ -1,21 +1,20 @@
-import { Link } from "react-router-dom"
-import { Movie } from "../../types/movie"
-import MovieScore from "../MovieScore"
+import { Link } from 'react-router-dom'
+import { Movie } from '../../types/movie'
+import MovieScore from '../MovieScore'
+import { Button, Container, Image, Title } from './styles'
 
 type Props = {
   movie: Movie
 }
 
-const MovieCard = ( {movie} : Props) => {
+const MovieCard = ({ movie }: Props) => {
   return (
-    <div className="card-container">
-      <img className="card-image" src={movie.image} alt={movie.title} />
-      <div className="card-content-bottom">
-        <h3>{movie.title}</h3>
-        <MovieScore count={movie.count} score={movie.score} />
-        <button className="card-button"><Link to={`/form/${movie.id}`}>Rate</Link></button>
-      </div>
-    </div>
+    <Container>
+      <Image src={movie.image} alt={movie.title} />
+      <Title>{movie.title}</Title>
+      <MovieScore count={movie.count} score={movie.score} />
+      <Button><Link to={`/form/${movie.id}`}>Rate</Link></Button>
+    </Container>
   )
 }
 

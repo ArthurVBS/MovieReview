@@ -1,5 +1,5 @@
 import { MoviePage } from '../../types/movie'
-import './styles.css'
+import { Button, Container, Span } from './styles'
 
 type Props = {
   page: MoviePage,
@@ -8,21 +8,21 @@ type Props = {
 
 const Pagination = ({ page, onChange }: Props) => {
   return (
-    <div className="pagination-container">
-      <button className="pagination-button" disabled={page.first}
+    <Container>
+      <Button disabled={page.first}
         onClick={() => onChange(page.number - 1)}
       >
         <i className="fas fa-angle-left"></i>
-      </button>
+      </Button>
 
-      <span>{`${page.number + 1} to ${page.totalPages}`}</span>
+      <Span>{`${page.number + 1} to ${page.totalPages}`}</Span>
 
-      <button className="pagination-button" disabled={page.last}
+      <Button disabled={page.last}
         onClick={() => onChange(page.number + 1)}
       >
         <i className="fas fa-angle-right"></i>
-      </button>
-    </div>
+      </Button>
+    </Container>
   )
 }
 
