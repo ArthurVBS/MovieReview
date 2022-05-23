@@ -7,7 +7,7 @@ type Props = {
   movie: Movie
 }
 
-const MovieCard = ({ movie }: Props) => {
+const MovieCard: React.FC<Props> = ({ movie }: Props) => {
   return (
     <Container>
       <Image src={movie.image} alt={movie.title} />

@@ -1,10 +1,10 @@
 export const theme = {
-  color : {
+  color: {
     primary: '#274EA4',
     secondary: '#90B3E8',
   },
 
-  main : {
+  main: {
     primary: '#FFF',
     secondary: '#DEDEDE',
     shadow: '#00000080'

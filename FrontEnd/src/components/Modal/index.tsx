@@ -5,7 +5,7 @@ type Props = {
   message: String
 }
 
-const Modal = ({ title, message }: Props) => {
+const Modal: React.FC<Props> = ({ title, message }: Props) => {
   return (
     <Container>
       <BoxMessage>

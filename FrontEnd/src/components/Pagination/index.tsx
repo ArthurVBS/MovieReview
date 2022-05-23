@@ -3,10 +3,10 @@ import { Button, Container, Span } from './styles'
 
 type Props = {
   page: MoviePage,
-  onChange : Function
+  onChange: Function
 }
 
-const Pagination = ({ page, onChange }: Props) => {
+const Pagination: React.FC<Props> = ({ page, onChange }: Props) => {
   return (
     <Container>
       <Button disabled={page.first}

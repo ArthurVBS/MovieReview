@@ -6,7 +6,7 @@ type Props = {
   page: MoviePage
 }
 
-const MovieContainer = ({ page }: Props) => {
+const MovieContainer: React.FC<Props> = ({ page }: Props) => {
   return (
     <Container className='container'>
       <div className='row'>

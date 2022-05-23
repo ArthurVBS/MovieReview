@@ -3,7 +3,7 @@ import { theme } from './theme'
 
 type ThemeType = typeof theme
 
-export default createGlobalStyle<{theme: ThemeType}>`
+export default createGlobalStyle<{ theme: ThemeType }>`
   * {
     margin: 0;
     padding: 0;

@@ -25,7 +25,7 @@ const getFills = (score: number) => {
   return fills
 }
 
-const Star = ({ fill }: StarProps) => {
+const Star: React.FC<StarProps> = ({ fill }: StarProps) => {
   if (fill === 0) {
     return <i className='far fa-star'></i> //Empty
   }
@@ -37,7 +37,7 @@ const Star = ({ fill }: StarProps) => {
   }
 }
 
-const MovieStars = ({ score }: Props) => {
+const MovieStars: React.FC<Props> = ({ score }: Props) => {
 
   const fills = getFills(score)
 

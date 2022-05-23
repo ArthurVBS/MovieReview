@@ -10,7 +10,7 @@ type Props = {
   movieId: String
 }
 
-const FormCard = ({ movieId }: Props) => {
+const FormCard: React.FC<Props> = ({ movieId }: Props) => {
 
   const navigate = useNavigate()
 
