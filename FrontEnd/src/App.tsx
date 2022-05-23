@@ -4,7 +4,9 @@ import Routes from './routes'
 import GlobalStyles from './styles/globalStyles'
 import { theme } from './styles/theme'
 import { ThemeProvider } from 'styled-components'
+
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App: React.FC = () => {
   return (
@@ -12,8 +14,8 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Navbar />
-
         <Routes />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   )
