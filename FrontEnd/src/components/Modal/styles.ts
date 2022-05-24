@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background-color: ${props => props.theme.main.primary};
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;

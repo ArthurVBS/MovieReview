@@ -5,6 +5,8 @@ import { BASE_URL } from '../../utils/request'
 import Modal from '../../components/Modal'
 import MovieContainer from '../../components/MovieContainer'
 import Pagination from '../../components/Pagination'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 const Listing: React.FC = () => {
   const [pageNumber, setPageNumber] = useState<Number>(0)
@@ -45,8 +47,10 @@ const Listing: React.FC = () => {
   const renderListing = () => {
     return (
       <>
+        <Header />
         <Pagination page={page} onChange={handlePageChange} />
         <MovieContainer page={page} />
+        <Footer />
       </>
     )
   }
@@ -57,11 +61,7 @@ const Listing: React.FC = () => {
     )
   }
 
-  return (
-    <>
-      {connected ? renderListing() : renderError()}
-    </>
-  )
+  return connected ? renderListing() : renderError()
 }
 
 export default Listing

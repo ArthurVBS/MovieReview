@@ -1,6 +1,6 @@
 import { Container, StyledLink, Logo, Nav } from './styles'
 
-const Navbar: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <Container>
       <Nav className='container'>
@@ -11,4 +11,4 @@ const Navbar: React.FC = () => {
   )
 }
 
-export default Navbar
+export default Header

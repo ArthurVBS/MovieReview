@@ -5,17 +5,12 @@ import GlobalStyles from './styles/globalStyles'
 import { theme } from './styles/theme'
 import { ThemeProvider } from 'styled-components'
 
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Navbar />
         <Routes />
-        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   )
