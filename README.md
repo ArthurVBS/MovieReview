@@ -32,7 +32,7 @@
 
 ## 💻 Project status:
 
-- 🚧 Project in progress... 🛠️
+- Finished project ✔️
 
 ## 🛠 Technologies:
 
@@ -50,7 +50,7 @@
 
 ## 📝 Features:
 
-- [ ] Allows the user to rate movies on posters.
+- [X] Allows the user to rate movies on posters.
 
 ## ⚙️ Prerequisites:
 
@@ -58,16 +58,25 @@
 
 - Node.js
 
+- Java
+
+- Maven
+
 ## 🚀 How to run the application?
 
 - 🌎 Go to the [application website](https://avbs-moviereview.netlify.app/).
 
   `or`
 
-- 💻 Download the ZIP or Clone the application on your machine,
-- Open CMD and navigate to 'FrontEnd' folder: `cd FrontEnd`,
-- Install node/react modules: `npm install`,
-- Finally start a localhost: `npm run dev`.
+- 💻 Download the ZIP or Clone the application on your machine;
+- 🎨 Frontend
+  - Open CMD and navigate to 'FrontEnd' folder: `cd FrontEnd`,
+  - Install node/react modules: `npm install`,
+  - Finally start a localhost: `npm run dev`.
+- 🎲 Backend
+  - Open another CMD in the root of the project folder,
+  - Navigate to 'BackEnd' folder: `cd BackEnd`,
+  - Start the Spring project with Maven: `mvn spring-boot:run`.  
 
 ## 📝 License
 
