@@ -1,3 +1,4 @@
+import Aos from 'aos'
 import axios, { AxiosRequestConfig } from 'axios'
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
@@ -11,10 +12,13 @@ type Props = {
 }
 
 const FormCard: React.FC<Props> = ({ movieId }: Props) => {
-
   const navigate = useNavigate()
 
   const [movie, setMovie] = useState<Movie>()
+
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false })
+  })
 
   useEffect(() => {
     axios.get(`${BASE_URL}/movies/${movieId}`)
@@ -54,7 +58,7 @@ const FormCard: React.FC<Props> = ({ movieId }: Props) => {
   }
 
   return (
-    <Container>
+    <Container data-aos="fade-right">
       <Image src={movie?.image} alt={movie?.title} />
       <Box>
         <Title>{movie?.title}</Title>

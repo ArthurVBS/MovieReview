@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  max-width: 480px;
+  max-width: 400px;
   min-height: 100%;
   margin: 8px auto;
   border-radius: 8px;
@@ -29,9 +29,16 @@ export const Button = styled.button`
   color: white;
   letter-spacing: 1px;
   align-self: center;
+  outline-offset: 2px;
   border: none;
   border-radius: 8px;
   padding: 4px 32px;
+  transition: all .3s;
+
+  &:hover{
+    background-color: ${props => props.theme.color.secondary};
+    outline: 1px solid ${props => props.theme.color.secondary};
+  }
 `
 
 export const Box = styled.div`

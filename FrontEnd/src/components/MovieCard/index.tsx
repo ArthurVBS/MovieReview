@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import Aos from 'aos'
 import { Link } from 'react-router-dom'
 import { Movie } from '../../types/movie'
 import MovieScore from '../MovieScore'
@@ -8,8 +10,12 @@ type Props = {
 }
 
 const MovieCard: React.FC<Props> = ({ movie }: Props) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: false })
+  })
+
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <Image src={movie.image} alt={movie.title} />
       <Title>{movie.title}</Title>
       <MovieScore count={movie.count} score={movie.score} />
