@@ -32,7 +32,7 @@
 
 ## 💻 Situação do projeto:
 
-- 🚧 Projeto em progresso... 🛠️
+- Projeto finalizado ✔️
 
 ## 🛠 Tecnologias:
 
@@ -50,13 +50,17 @@
 
 ## 📝 Features:
 
-- [ ] Permitir que usuário avalie os filmes em cartazes.
+- [X] Permitir que usuário avalie os filmes em cartazes.
 
 ## ⚙️ Pré-requisitos:
 
 - Acesso à internet - Navegador
 
 - Node.js
+
+- Java
+
+- Maven
 
 ## 🚀 Como rodar a aplicação?
 
@@ -65,9 +69,14 @@
   `ou`
 
 - 💻 Baixe o ZIP ou Faça um clone da aplicação em sua máquina,
-- Abra o CMD e navegue até a pasta 'FrontEnd': `cd FrontEnd`,
-- Instale os módulos node/react: `npm install`,
-- Por fim, inicie um localhost: `npm run dev`.
+- 🎨 Frontend
+  - Abra o CMD e navegue até a pasta 'FrontEnd': `cd FrontEnd`,
+  - Instale os módulos node/react: `npm install`,
+  - Por fim, inicie um localhost: `npm run dev`.
+- 🎲 Backend
+  - Abra outro CMD na pasta raiz do projeto,
+  - Navegue até a pasta 'BackEnd': `cd BackEnd`,
+  - Inicie o projeto Spring com o Maven: `mvn spring-boot:run`. 
 
 ## 📝 Licença
 
