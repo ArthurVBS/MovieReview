@@ -13,7 +13,7 @@
   &nbsp;
   <img src="https://img.shields.io/badge/React-000?style=social&logo=react&logoColor=469BD2">
   &nbsp;
-  <img src="https://img.shields.io/badge/Java-000?style=social&logo=java&logoColor=469BD2">
+  <img src="https://img.shields.io/badge/Java-000?style=social&logo=openjdk&logoColor=469BD2">
   &nbsp;
   <img src="https://img.shields.io/badge/Spring-000?style=social&logo=spring&logoColor=469BD2">
   &nbsp;
@@ -63,10 +63,6 @@
 - Maven
 
 ## 🚀 How to run the application?
-
-- 🌎 Go to the [application website](https://avbs-moviereview.netlify.app/).
-
-  `or`
 
 - 💻 Download the ZIP or Clone the application on your machine;
 - 🎨 Frontend
